@@ -1,4 +1,4 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, HttpStatus, Query } from '@nestjs/common';
 
 import { isIP } from 'net';
 
@@ -21,7 +21,10 @@ export class LocationController {
     const location = this._locationService.getGeoData(ip);
 
     if (!location) {
-      throw ResponseManager.buildError(ERROR_MESSAGES.IP_NOT_FOUND);
+      throw ResponseManager.buildError(
+        ERROR_MESSAGES.IP_NOT_FOUND,
+        HttpStatus.NOT_FOUND,
+      );
     }
 
     return location;
