@@ -43,7 +43,7 @@
     }
   },
   "info": {
-    "title": "Locate IP API",
+    "title": "Locate by IP API",
     "description": "Location determination by ip",
     "version": "0.1.0",
     "contact": {

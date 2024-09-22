@@ -12,7 +12,7 @@ async function bootstrap() {
   app.disable('x-powered-by');
 
   const config = new DocumentBuilder()
-    .setTitle('Locate IP API')
+    .setTitle('Locate by IP API')
     .setDescription('Location determination by ip')
     .setVersion('0.1.0')
     .setContact(
