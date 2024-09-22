@@ -1,0 +1,6 @@
+{
+  "apiInputPath": ".",
+  "sdkOutput": "sdk",
+  "sdkInterfacePath": "./sdk/sdk-interface.ts",
+  "verbose": true
+}

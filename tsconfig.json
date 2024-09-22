@@ -22,5 +22,6 @@
       "@app/*": ["./src/*"]
     }
   },
+  "include": ["src/**/*.ts", "src/tsconfig.json"],
   "exclude": ["node_modules", "dist"]
 }
