@@ -2,7 +2,7 @@
 /dist
 /node_modules
 /build
-
+sdk-generator.build.log
 # Logs
 logs
 *.log

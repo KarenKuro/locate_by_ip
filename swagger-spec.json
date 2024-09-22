@@ -1,0 +1,84 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "LocationController_getLocation",
+        "summary": "Location determination by ip",
+        "parameters": [
+          {
+            "name": "ip",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Location response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LocationResponseDTO"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "err_incorrect_ip_format"
+          },
+          "404": {
+            "description": "err_ip_not_found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "tags": [
+          "Location"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Locate IP API",
+    "description": "Location determination by ip",
+    "version": "0.1.0",
+    "contact": {
+      "name": "KarenKuro",
+      "url": "https://github.com/KarenKuro",
+      "email": "kkarenk888@gmail.com"
+    }
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "schemas": {
+      "LocationResponseDTO": {
+        "type": "object",
+        "properties": {
+          "lat": {
+            "type": "string"
+          },
+          "lng": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "lat",
+          "lng",
+          "country",
+          "city"
+        ]
+      }
+    }
+  }
+}

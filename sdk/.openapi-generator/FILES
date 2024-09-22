@@ -1,0 +1,7 @@
+.openapi-generator-ignore
+apis/LocationApi.ts
+apis/index.ts
+index.ts
+models/LocationResponseDTO.ts
+models/index.ts
+runtime.ts
