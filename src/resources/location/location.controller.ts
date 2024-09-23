@@ -1,12 +1,4 @@
 import { Controller, Get, HttpStatus, Query } from '@nestjs/common';
-
-import { isIP } from 'net';
-
-import { ResponseManager } from '@common/helpers';
-import { ERROR_MESSAGES } from '@common/messages';
-
-import { LocationService } from './location.service';
-import { LocationResponseDTO } from './dtos';
 import {
   ApiBadRequestResponse,
   ApiInternalServerErrorResponse,
@@ -16,6 +8,13 @@ import {
   ApiResponse,
   ApiTags,
 } from '@nestjs/swagger';
+
+import { isIP } from 'net';
+
+import { ERROR_MESSAGES, ResponseManager } from '@common/index';
+
+import { LocationService } from './location.service';
+import { LocationResponseDTO } from './dtos';
 
 @Controller()
 export class LocationController {

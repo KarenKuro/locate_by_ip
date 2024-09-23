@@ -1,7 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
- * Locate IP API
+ * Locate by IP API
  * Location determination by ip
  *
  * The version of the OpenAPI document: 0.1.0
