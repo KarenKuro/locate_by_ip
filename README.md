@@ -1,7 +1,7 @@
 Author: Karen Kurginyan
 Date: 23.09.2024
 
-# Locate_by_ip. Geo-Coordinates & Location Information Service
+# Geo-Coordinates & Location Information Service
 
 ## Description
 
@@ -10,23 +10,23 @@ A web service that provides geocoordinates (latitude and longitude) and location
 # Web Service:
 
 Request Format:
-GET http://localhost:3000/?ip=<ip>
+GET http://localhost:3000/?ip=123.123.123.123
 
 # Response:
 
 {
-"lat": "<latitude>",
-"lng": "<longitude>",
-"country": "<country>",
-"city": "<city>"
+"lat": "39.911",
+"lng": "116.395",
+"country": "CN",
+"city": "Beijing"
 }
 
 # Response Codes:
 
-200 OK: Successfully retrieved the geo-location.
-404 Not Found: No data available for the provided IP.
-400 Bad Request: The IP address format is invalid.
-500 Internal Server Error: Server encountered an error.
+- 200 OK: Successfully retrieved the geo-location.
+- 404 Not Found: No data available for the provided IP.
+- 400 Bad Request: The IP address format is invalid.
+- 500 Internal Server Error: Server encountered an error.
 
 # Package Used:
 
@@ -101,7 +101,3 @@ $ npm run start
 ```bash
 $ npm run test
 ```
-
-## Stay in touch
-
-# Documented By - [Karen Kurginyan]
